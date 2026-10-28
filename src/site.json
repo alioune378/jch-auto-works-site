@@ -1,0 +1,179 @@
+{
+  "_readme": "SINGLE SOURCE OF TRUTH for business facts. Edit here, run `python3 build.py`, redeploy. Each fact has a status: 'verified' = stated on jchautoworksllc.org (audited 2026-10-28) or visible in owner-supplied photos; 'confirm' = needs owner sign-off before launch (hidden from the public site while show=false).",
+  "business": {
+    "name": "JCH Auto Works LLC",
+    "shortName": "JCH Auto Works",
+    "legalNameOnOldSite": "J C H Auto Works LLC",
+    "domain": "https://www.jchautoworksllc.org",
+    "phone": "(315) 584-1944",
+    "phoneE164": "+13155841944",
+    "email": "JCHAutoWorks@yahoo.com",
+    "street": "904 State Route 21",
+    "poBox": "PO Box 121",
+    "city": "Palmyra",
+    "region": "NY",
+    "postal": "14522",
+    "geo": {
+      "lat": 43.04225,
+      "lng": -77.23225
+    },
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=JCH+Auto+Works+904+State+Route+21+Palmyra+NY+14522",
+    "facebook": "https://www.facebook.com/profile.php?id=61558594201120",
+    "hours": [
+      {
+        "days": "Monday – Friday",
+        "open": "8:00 AM",
+        "close": "5:00 PM",
+        "schema": "Mo-Fr 08:00-17:00"
+      },
+      {
+        "days": "Saturday – Sunday",
+        "closed": true
+      }
+    ],
+    "status": "verified (old site footer)"
+  },
+  "claims": {
+    "familyOwned": {
+      "text": "Family owned and operated",
+      "status": "verified",
+      "show": true
+    },
+    "experience": {
+      "text": "Over 30 years of auto body expertise",
+      "status": "verified wording; CONFIRM whose experience (owner vs. team) — the business itself is described as recently established",
+      "show": true
+    },
+    "icar": {
+      "text": "I-CAR certified technician on staff",
+      "status": "verified (old site says 'iCar-Certified technician'); CONFIRM certificate level (e.g. Platinum / ProLevel) and name before stating more",
+      "show": true
+    },
+    "freeEstimates": {
+      "text": "Free, no-obligation estimates",
+      "status": "verified",
+      "show": true
+    },
+    "insurance": {
+      "text": "Works with all major insurance companies",
+      "status": "verified wording; NOT a direct-repair-program (DRP) claim",
+      "show": true
+    },
+    "warranty": {
+      "text": "Lifetime workmanship warranty for as long as you own the vehicle; parts carry the manufacturer's warranty",
+      "status": "verified; CONFIRM written warranty terms/exclusions document",
+      "show": true
+    },
+    "repairUpdates": {
+      "text": "Repair updates while your vehicle is at the shop",
+      "status": "verified (FAQ)",
+      "show": true
+    },
+    "nysRegistered": {
+      "text": "Registered New York State motor vehicle repair shop",
+      "status": "sign visible in the REAL storefront photo; CONFIRM DMV facility number to display",
+      "show": true,
+      "facilityNumber": ""
+    },
+    "established": {
+      "text": "",
+      "status": "CONFIRM year the LLC opened (old site: 'recently established'; copyright 2023)",
+      "show": false
+    },
+    "ownerName": {
+      "text": "",
+      "status": "CONFIRM — not public",
+      "show": false
+    },
+    "towing": {
+      "text": "",
+      "status": "CONFIRM — does JCH tow, or arrange towing?",
+      "show": false
+    },
+    "rental": {
+      "text": "",
+      "status": "CONFIRM — rental car coordination?",
+      "show": false
+    },
+    "inspection": {
+      "text": "",
+      "status": "CONFIRM — second sign in photo may be an NYS inspection station sign",
+      "show": false
+    }
+  },
+  "services": [
+    {
+      "slug": "collision-repair",
+      "name": "Collision Repair",
+      "source": "verified (FAQ: cosmetic & structural repair)",
+      "inHouse": true
+    },
+    {
+      "slug": "auto-body-paint",
+      "name": "Auto Body & Paint",
+      "source": "verified (FAQ: bumper repair, paint repair)",
+      "inHouse": true
+    },
+    {
+      "slug": "paintless-dent-repair",
+      "name": "Paintless Dent Repair",
+      "source": "verified (services list)",
+      "inHouse": true
+    },
+    {
+      "slug": "structural-repair",
+      "name": "Structural Repair",
+      "source": "verified (FAQ: structural repair); CONFIRM frame/measuring equipment before naming it",
+      "inHouse": true
+    },
+    {
+      "slug": "glass",
+      "name": "Windshield & Glass",
+      "source": "verified (FAQ); CONFIRM in-house vs. partner installer",
+      "inHouse": "confirm"
+    },
+    {
+      "slug": "diagnostics-calibration",
+      "name": "Diagnostics & Calibration",
+      "source": "verified (FAQ: diagnostics & calibration); CONFIRM which ADAS calibrations are in-house vs. sublet",
+      "inHouse": "confirm"
+    }
+  ],
+  "serviceArea": {
+    "primary": "Palmyra, NY",
+    "nearby": [
+      "Macedon",
+      "Newark",
+      "Marion",
+      "Walworth",
+      "Ontario",
+      "Fairport",
+      "Victor",
+      "Wayne County"
+    ],
+    "status": "CONFIRM — list shown as 'customers often come from'; no city doorway pages are generated"
+  },
+  "reviews": {
+    "items": [],
+    "status": "No reviews published. Add only real, permission-granted reviews: {\"name\":\"First L.\",\"text\":\"...\",\"source\":\"Google\",\"date\":\"2026-11\"}. No star rating is shown or put in schema until real data exists.",
+    "googleReviewUrl": ""
+  },
+  "gallery": {
+    "pairs": [],
+    "status": "Add authorized before/after pairs: {\"before\":\"img/x-before.webp\",\"after\":\"img/x-after.webp\",\"vehicle\":\"2021 Jeep Grand Cherokee\",\"repair\":\"Front bumper & headlamp\",\"note\":\"...\"}"
+  },
+  "integrations": {
+    "formsMode": "auto",
+    "_formsMode": "auto = live Netlify Forms on the production/Netlify domain, labeled demo mode anywhere else (claude.ai preview, localhost). Force with 'live' or 'demo'.",
+    "ga4Id": "",
+    "gtmId": "",
+    "searchConsoleToken": ""
+  },
+  "credits": {
+    "builtBy": "Dalal Technologies"
+  },
+  "media": {
+    "illustrative": true,
+    "_note": "The storefront photo (jch-auto-works-shop-exterior-*) is a REAL photo of the shop. The two interior images (illustrative-*) are generated illustrations and are always labeled 'Illustrative image'. Replace them with real shop photos, then set illustrative=false."
+  }
+}
