@@ -16,6 +16,8 @@ from pathlib import Path
 
 SRC = Path(__file__).parent
 DIST = SRC.parent / "dist"
+import hashlib as _h
+ASSET_V = {f: _h.md5((SRC / "assets" / f).read_bytes()).hexdigest()[:8] for f in ("style.css", "app.js")}  # cache-busting
 S = json.loads((SRC / "site.json").read_text())
 B, C = S["business"], S["claims"]
 DOMAIN = B["domain"].rstrip("/")
@@ -200,7 +202,7 @@ def page(slug, title, desc, body, crumbs=None, extra_ld=None, active="", preload
 {gsc}<link rel="icon" href="img/favicon.png" type="image/png"><link rel="apple-touch-icon" href="img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=IBM+Plex+Mono:wght@500&family=Manrope:wght@400;500;600;700&display=swap">
-{pre}<link rel="stylesheet" href="assets/style.css">
+{pre}<link rel="stylesheet" href="assets/style.css?v={ASSET_V['style.css']}">
 <script>window.JCH={json.dumps(cfg)};</script>
 {ld}
 </head>
@@ -210,7 +212,7 @@ def page(slug, title, desc, body, crumbs=None, extra_ld=None, active="", preload
 {body}
 </main>
 {footer(slug)}
-<script src="assets/app.js" defer></script>
+<script src="assets/app.js?v={ASSET_V['app.js']}" defer></script>
 </body>
 </html>
 '''
